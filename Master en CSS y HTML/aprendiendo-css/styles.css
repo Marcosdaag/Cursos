@@ -1,0 +1,48 @@
+/* Selectores */
+
+/* Selector universal (selecciona todo el documento) */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Selector de etiqueta */
+/* De esta manera directamente selecciono un tipo de elemento y modifico sus propiedades */
+h1{
+    font-size: 30px;
+}
+
+footer a{
+    /* De esta manera entro a los elementos a dentro de la etiqueta footer */
+    list-style: none;
+}
+
+/* Selector de id */
+#descripcion{
+    border: 1px solid black;
+}
+
+#descripcion,
+#titulo{
+    /* De esta manera selecciono dos id distintos y les doy las mismas propiedades */
+    border: 1px solid black;
+}
+
+/* Selector de clase */
+.secciones{
+    /* De esta manera seleciono una clase, la cual puede ser aplicada a muchos objetos */
+    text-transform: uppercase;
+}
+
+/* Selector de atributo */
+input[type="text"]{
+    /* De esta manera puedo seleccionar elementos desde sus atributos */
+    padding: 10px;
+}
+
+/* Selectores hijo */
+ul > a{
+    /* Selecciono todos los elementos a dentro de los elementos ul */
+    text-decoration: none;
+}
+
+/* La priodidad en CSS se aplica de arriba hacia abajo, por especificidad o utilizando el !important */
