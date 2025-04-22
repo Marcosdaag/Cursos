@@ -1,0 +1,135 @@
+/*
+Ejercicio con HTML y CSS.
+1. Crear un documento HTML y vincularlo con un CSS.
+2. Crear una estructura HTML que cuente con un CONTENEDOR GENERAL, UN HEADER, UN MENU, UN SIDEBAR, CONTENIDO PRINCIPAL y FOOTER.
+3. Todo el contenido debe estar dentro del contenedor general y su ancho sera de 1200px y estar centrado.
+4. Header debe ocupar el 100% del ancho y tener un texto grande centrado.
+5. El menu debe tener los elementos uno al lado del otro.
+6. El contenido principal debe tener un ancho del 70%.
+7. El contenido dentro del contenedor principal debe ser una cuadricula con 4 lineas de 2 cajas.
+8. La barra lateral debe tener un ancho del 30%.
+9. El footer debe tener un ancho del 100% y estar abajo del todo.
+*/
+*{
+    margin: 0px auto;
+    font-family: sans-serif;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#contenedorPrincipal{
+    width: 1200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(15, 118, 236);
+    color: white;
+    line-height: 100px;
+    font-size: 20px;
+    word-spacing: 10px;
+}
+
+#menu{
+    background-color: #eeeeee;
+    border-bottom: 1px solid #ccc;
+}
+
+#menu ul{
+    text-align: center;
+
+}
+
+#menu ul li{
+    /* display: inline-block; */
+    display: block;
+    float: left;
+    padding: 12px;
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li:last-child {
+    border-right: none;
+}
+
+#menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+}
+
+#menu ul li:hover{
+    background-color: rgb(15, 118, 236);
+    cursor: pointer;
+}
+
+#menu ul li a:hover{
+    color: white;
+}
+
+#contenidoPrincipal{
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#contenedor{
+    width: 70%;
+    float: left;
+    margin-left: 50px;
+}
+
+.caja{
+    width: 45%;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 250px;
+    background-color: #ccc;
+
+    /* De esta manera se pueden aplicar sombras a una caja, tambien puedo agregar despues del black, inset para hacer una sombra hacia adentro */
+    box-shadow: 3px 3px 2px black;
+}
+
+#barraLateral{
+    width: 25%;
+    height: 1020px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #ccc;
+    padding: 1px;
+
+    /* De esta manera oculto todo el texto que salga de la caja */
+    /* overflow: hidden; */
+
+    /* De esta manera puedo scrollear para ver todo el contenido no visible */
+    overflow-y: scroll; /* Esto hace que solo se muestre la barra de scroll en el eje Y */
+}
+
+#barraLateral #titulo{
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #eeeeee;
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    margin: 0px;
+    text-decoration: underline;
+}

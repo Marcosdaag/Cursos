@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajas en CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>cajas en css</h1>
 
-    <div id="caja1">
-        <p>Contenido de la caja 1</p>
-    </div>
-    
-    <section id="caja2">
-        <p>Contenido de la caja 2</p>
+<body>
+    <section id="cajas">
+        <h1>cajas en css</h1>
+
+        <div class="caja">
+            <p>Contenido de la caja 1</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 2</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 3</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 4</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 5</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 6</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 7</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 8</p>
+        </div>
+
+        <div class="caja">
+            <p>Contenido de la caja 9</p>
+        </div>
+        <div class="clearfix"></div>
     </section>
-    
+    <!-- Al tener los elementos de arriba con display block y haberlos posicionado a la izquierda, los textos de abajo tienen un display inline por defecto y se posicionan al lado,
+    ya que queremos que se pongan debajo podemos crear un div con la class clearfix para hacer un clean de los floats -->
+    <div class="clearfix"></div>
+
+    <h2>Contenido despues de las cajas posicionadas</h2>
+    <p>Texto de prueba</p>
+
 </body>
 </html>

@@ -2,18 +2,39 @@
     /* Las paginas por defecto traen algunos estilos y aca puedo resetearlos */
     margin: 0px;
     padding: 0px;
+    padding: 10px;
 }
 
-#caja1,
-#caja2{
+.caja{
     /* Modificar el size de la caja */
     width: 250px;
     height: 250px;
     background-color: lightblue;
-    border: 1px solid red;
+    border: 3px solid red;
 
     /* Distintas maneras de trabajar con margenes */
     margin: top right bottom left; /* cada numero representa un lugar */
     margin: 10px; /* aplica margen a los cuatro lados */
     /* margin-top: ; de esta manera aclaro el lugar */
+
+    text-align: center;
+    line-height: 250px;
+
+    /* Al ser un elemento block, usando el float puedo dirigir hacia donde van los items (Importante que sea display block) */
+    float: left;
+
+    /* El display inline que es como suelen ser los textos o imagenes no puedo ponerles un float */
+}
+
+/* De esta manera con el clear both limpia todos los flotados pero both puede tomar valores como left, right, etc. */
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#cajas{
+    max-width: 890px;
+
+    /* Para poder aplicar un borde, tengo que poner un clearfix al final de la section ya que al tener los flotados no detecta bien el size de la caja */
+    border: 1px solid black;
 }
