@@ -1,0 +1,22 @@
+h1{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* Alineamiento del texto dentro de su contenedor*/
+    text-align: center;
+
+    /* Altura de linea */
+    line-height: 20px;
+
+    /* Decoracion del texto */
+    text-decoration: none;
+
+    /* De esta manera cada vez que hay un cambio de parrafo <p>, hace una identacion */
+    text-indent: 15px;
+
+    /* Espacio entre palabras */
+    word-spacing: 10px;
+
+    /* Espacio entre letras */
+    letter-spacing: 10px;
+}

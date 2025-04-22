@@ -1,0 +1,41 @@
+/* Fuente descargada */
+/* De la siguiente manera podemos incluir una fuente que descargamos y tenemos en la carpeta */
+@font-face{
+    font-family: FuenteCustom;
+    src: url(static/PlaywriteRO-Regular.ttf);
+}
+
+*{
+    /* Cambio la fuente del texto */
+    font-family: sans-serif;
+
+    /* Cambio el size de la letra (tiene distintas mediadas, px, %, em) */
+    font-size: 40px;
+
+    /* Cambio el grosor de la letra */
+    font-weight: 700;
+
+    /* Cambio el estilo de la fuente */
+    font-style: italic;
+
+    /* Fuente personalizada (primero linkeamos la fuente sacada de googlefonts al html y despues aca la llamo directamente) */
+    font-family: "Special Gothic Expanded One", sans-serif;
+
+    /* Transformacion del texto */
+    text-transform: uppercase;
+
+     /* Fuente custom desde una carpeta */
+     font-family: FuenteCustom, sans-serif;
+}
+
+/* Colores */
+
+/* Colores del sistema https://www.w3schools.com/cssref/css_colors.php */
+
+/* Colores hexadecimales #000000 */
+
+/* Colores RGB https://rgbacolorpicker.com/ */
+
+/* Colores RGBA https://rgbacolorpicker.com/ */
+
+/* Gradient https://cssgradient.io/ */

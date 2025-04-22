@@ -1,0 +1,22 @@
+body{
+    /* background tiene muchas propiedades y se recomienda ser lo mas especifico posible para no tener errores */
+    background-color: #ccc;
+
+    /* En caso de descargar un patter de google y querer ponerlo se hace de la siguiente manera */
+    /* background-image: url(); */
+
+    /* Tambien hay otras propiedades como por ej: */
+
+    /* background-repeat: ;
+    background-size: ;
+    background-position: ;
+    background-attachment: fixed; el fondo se queda fijo mientras que el contenido si se mueve */
+}
+
+#caja{
+    /* Le pongo un borde de 3px, solido y de color negro */
+    border: 3px solid black;
+    padding: 10px;
+    background-color: aquamarine;
+    color: white;
+}
