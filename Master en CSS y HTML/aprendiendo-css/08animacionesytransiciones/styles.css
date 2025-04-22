@@ -1,0 +1,78 @@
+#boton{
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 120px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+
+    /* De esta manera le agrego una transicion al boton */
+    transition: all 500ms;
+    transition: border 500ms, background 3s; /* de esta manera controlamos la transicion de manera mas controlada y separada para cada propiedad */
+    /* De esta manera hago que todas las transformaciones CSS que pueda sufrir este elemento las haga en 300ms */
+}
+
+#boton:hover{
+    border-radius: 15px;
+    background-color: greenyellow;
+    color: black;
+}
+
+
+/* Animaciones */
+
+/* Con las animaciones podemos hacer mas complejas que con las transiciones ya que podemos lanzarlas mediante eventos y tambien se maneja por keyframes que son como los fps de la */
+
+#caja{
+    width: 200px;
+    height: 200px;
+    color: white;
+    background: yellowgreen;
+    border: 2px solid black;
+    margin-top: 25px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+
+    /* De esta manera asignamos una animacion llamada desplazamiento creada abajo, le damos una duracion de 10s y definimos su iteracion, en este caso infinita */
+    animation-name: desplazamiento;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    /* La animacion se ve lenta cuando tiene que volver de un lado al otro y se puede modificar/arreglar de esta manera */
+    animation-timing-function: linear;
+}
+
+@keyframes desplazamiento{
+    /* Las animacione se pueden hacer de esta manera */
+
+    /* from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 1200px;
+    } */
+
+    /* Tambien se pueden hacer de otra manera mas especifica calculando mas exactamente las partes que queramos de la animacion */
+    /* En este caso estoy haciendo que al inicio este en el pixel 0, al 50% de la animacion este en el 1200 y al final vuelva a estar en el 0 */
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        border-radius: 999px;
+    }
+    50%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+        border-radius: 999px;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        border-radius: 999px;
+    }
+}
