@@ -1,0 +1,19 @@
+*{
+    /* Las paginas por defecto traen algunos estilos y aca puedo resetearlos */
+    margin: 0px;
+    padding: 0px;
+}
+
+#caja1,
+#caja2{
+    /* Modificar el size de la caja */
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    border: 1px solid red;
+
+    /* Distintas maneras de trabajar con margenes */
+    margin: top right bottom left; /* cada numero representa un lugar */
+    margin: 10px; /* aplica margen a los cuatro lados */
+    /* margin-top: ; de esta manera aclaro el lugar */
+}
