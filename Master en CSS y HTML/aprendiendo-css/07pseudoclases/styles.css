@@ -1,0 +1,49 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Pseudoclases */
+
+ul li:first-child{ /* con el first-child selecciono el primer elemento li dentro del ul */
+    color: purple;
+}
+
+ul li:nth-child(2){ /* de esta forma selecciono un elemento por su index */
+    color: yellow;
+}
+
+ul li:last-child{ /* de esta forma selecciono el  ultimo elemento */
+    color: orange;
+}
+
+/* Tambien hay otro tipo de pseudoclases pero es cuestion de investigar */
+
+#miEnlace{
+    font-size: 20px;
+    color: lightcoral;
+}
+
+#miEnlace:link{ /* de esta manera le creo un estilo para que se muestre cuando yo no visite el enlace */
+    color: red;
+}
+
+#miEnlace:visited{ /* de esta manera le creo un estilo para que se muestre cuando yo ya visite el enlace */
+    color: blue;
+}
+
+#miEnlace:hover{ /* de esta manera defino los estilos cuando estoy sobre los elementos */
+    color: aqua;
+}
+
+#miEnlace:active{ /* de esta manera defino los estilos cuando estoy presionando el elemento */
+    color: greenyellow;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:focus{ /* de esta manera controlo los estilos al estar dentro del campo */
+    background-color: aqua;
+}
