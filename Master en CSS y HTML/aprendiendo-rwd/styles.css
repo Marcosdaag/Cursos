@@ -1,3 +1,86 @@
 *{
-    background-color: aqua;
+    margin: 0px;
+    padding: 0px;
 }
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#container{
+    width: 70%;
+    background: red;
+    margin: 0px auto;
+    font-family: sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+header{
+    width: 100%;
+    background: lightblue;
+    color: #333;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+}
+
+aside{
+    width: 25%;
+    float: left;
+    min-height: 700px;
+    background: #ccc;
+    text-align: center;
+    line-height: 700px;
+}
+
+#articles{
+    background-color: lemonchiffon;
+    width: 75%;
+    min-height: 700px;
+    float: left;
+}
+
+#articles article{
+    width: 30%;
+    height: 150px;
+    background: black;
+    color: white;
+    line-height: 150px;
+    text-align: center;
+    border: 2px solid white;
+    float: left;
+    margin: 10px;
+}
+
+/* RESPONSIVE */
+
+/* En una primera instancia estoy haciendo que los articulos tomen distintos colores y porcentajes de width dependiendo del size de la pagina, primero hace que hasta los 632px tomen un valor del 90% pero al superar esa cantidad de pixeles toman el 40% del contenedor y ya posterior a los 888px toman los estilos definidos arriba */
+
+/* Esto hace referencia que hasta la maxima anchura de 888px la pagina actue de cierta forma */
+@media (max-width: 888px){
+    /* Se ejecutan estos estilos hasta los 888px */
+
+    #articles article{
+        width: 40%;
+        background: red;
+    }
+}
+
+@media (max-width: 632px){
+    /* Se ejecutan estos estilos hasta los 632px */
+
+    #articles article{
+        width: 90%;
+        background: blue;
+    }
+}
+
+/* Ademas de max width, tambien esta mix width, max height y min height. Sumandole a eso tambien se pueden combinar dos parametros para que aplique ciertos estilos de la siguiente manera.
+
+@media (max-width: 1000px) and (max-height 600px){
+    Estilos
+}
+
+De esta manera hace que hasta una anchura de 1000px y una altura de 600px se apliquen ciertos estilos, de esta manera agregando mas condiciones para aplicar unos estilos u otros. */
