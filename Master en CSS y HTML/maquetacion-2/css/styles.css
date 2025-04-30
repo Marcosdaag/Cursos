@@ -39,7 +39,7 @@ body{
     margin: 0px auto;
 }
 
-#gear{
+.gear, #icon{
     font-family: "WebSymbolsRegular";
 }
 
@@ -131,4 +131,21 @@ body{
     margin: 27px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
+}
+
+/* TARJETAS */
+#card{
+    float: left;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ddd;
+    overflow: hidden;
+    margin: 19px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#card:last-child{
+    margin-right: 0px;
 }
