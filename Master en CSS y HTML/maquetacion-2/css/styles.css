@@ -354,7 +354,7 @@ aside h3{
 
 /* ARTICULOS */
 #articles{
-    width: 860px;
+    width: 800px;
     float: left;
 }
 
@@ -374,4 +374,75 @@ aside h3{
     margin: 0px auto;
     margin-top: 20px;
     margin-bottom: 15px;
+}
+
+#articles article{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: "TrebuchetMS";
+    background: white;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
+    border-radius: 5px;
+}
+
+#articles article h4{
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+
+#articles article h4 a{
+    text-decoration: none;
+    color: #00538c;
+}
+
+#articles article h4 a:hover{
+    text-decoration: underline;
+    color: #00538c;
+}
+
+#articles .data{
+    float: right;
+    background: #393d3f;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 2px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top: -13px;
+}
+
+#articles .data span{
+    margin: 5px;
+}
+
+#articles article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#blog{
+    height: 100px;
+    margin-top: 60px;
+    line-height: 100px;
+    text-align: center;
+    font-family: "BebasNeue";
+    border: 1px solid grey;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    border-radius: 5px;
+}
+
+#blog a{
+    font-family: "BebasNeue";
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #00538c;
+    text-decoration: none;
 }
