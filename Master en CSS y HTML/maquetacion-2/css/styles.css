@@ -661,6 +661,7 @@ aside h3{
 #footer ul li:hover a{
     font-size: 32px;
     padding-left: 20px;
+    width: 100%;
 }
 
 #footer iframe{
