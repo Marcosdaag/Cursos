@@ -196,12 +196,12 @@ body{
     margin: 27px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
-    animation: showText 2s linear;
+    animation: showText 1s linear;
 }
 
 @keyframes showText{
     0%{
-        transform: translateX(-600%) scale(1,1);
+        transform: translateX(-300%) scale(1,1);
         opacity: 1;
     }
     100%{
