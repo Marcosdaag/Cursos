@@ -26,3 +26,10 @@ if(edad1 > edad2){
     console.log("Edad uno es inferior");
 }
 
+/* 
+Operadores logicos sirven para que al momento de necesitar que un parametro cumpla con mas de una condicion no necesitemos anidar codigo de mas
+
+AND(Y) &&
+OR(O) ||
+NEGACION !=
+*/
