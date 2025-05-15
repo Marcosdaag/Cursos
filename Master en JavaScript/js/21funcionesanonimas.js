@@ -21,4 +21,12 @@ function sumame(numero1, numero2, sumaPorDos){
 // En la funcion de arriba definimos que la funcion sumaPorDos recibe un dato que es sumar y despues cuando llamamos la funcion, definimos el comportamiento de esa funcion y que es lo que hace con ese dato
 sumame(9, 5, function(dato){
     console.log("la suma por dos es "+dato*2 );
-})
+});
+
+
+//Funciones de flecha lo que hacen es primero llamar a los parametros (en caso de ser uno no es necesario el parentesis) y luego una flecha que reemplazaria la palabra function por ej:
+
+// De esta manera funcionaria exactamente igual pero es una manera de hacerlo mas limpio y que sea mas claro
+sumame(9, 10, dato =>{
+    console.log("la suma por dos es "+dato*2 );
+});
