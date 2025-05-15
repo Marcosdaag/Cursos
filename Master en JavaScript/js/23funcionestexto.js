@@ -29,3 +29,22 @@ console.log(textoTotal);
 
 //Tambien puedo concatenar de esta manera
 texto1.concat(texto2);
+
+//Funciones para la busqueda dentro de un texto
+
+var busqueda = texto1.indexOf("curso");
+console.log(busqueda);//Muestra en que caracter se encuenta la primer coincidencia
+
+var busqueda2 = texto1.lastIndexOf("cruso");//Muestra cual es la ultima coincidencia de la palabra
+
+ /* 
+ Hay otros metodos de busqueda como
+ .search
+ .match (me devuelve un array de todos los resultados)
+ IMPORTANTE AL PONER EL MATCH la palabra abuscar tendrai que estar entra barras /curso/g
+.subsrt //Saca una parte del texto desd eel caracter inicial y cuantos carateres quiero sacar (14,5)
+.charAt me saca un caracter en especifico
+.startsWith me devuelve true o false dependiendo si encuentra una frase que empiece con esa palabra
+.endsWith
+.includes
+ */
