@@ -48,3 +48,11 @@ var busqueda2 = texto1.lastIndexOf("cruso");//Muestra cual es la ultima coincide
 .endsWith
 .includes
  */
+
+
+// FUNCIONES PARA REEMPLAZAR TEXTO
+
+texto1.replace("curso", "cursito");
+texto1.slice(40, 60);//Corta el string y empieza en el caracter 14 y termina en 22 o hasta el final
+texto1.split(" ");//Nos da una coleccion que en este caso esta separada por los espacios del texto " "
+texto1.trim();//Me saca los espacios por adelante y por atras del texto
