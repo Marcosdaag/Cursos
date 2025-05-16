@@ -32,3 +32,32 @@ for(var i =0; i < nombre.length; i++){
 nombre.forEach(function(elemento, indice){
     document.write(indice+" "+elemento);
 });
+
+//Otra forma interesante de hacerlo
+for(let lenguaje in lenguajes){
+    document.write(lenguajes[lenguaje]);
+}
+
+//Busquedas
+
+//Asi hacemos una busqueda y nos devuelve true o false sie s que lo encontro o no
+var busqueda = lenguajes.find(function(lenguaje){
+    return lenguaje == "PHP";
+});
+
+var busqueda2 = lenguajes.findIndex(function(lenguaje){
+    return lenguaje == "PHP";
+});
+
+
+//Busquedas dentro de arrays numericos
+
+var precios = [12, 23, 40, 52, 80];
+
+var busquedaPrecios = precios.some(function(precio){
+    return precio <= 50;
+});
+
+//La manera mas eficiente de hacer esto es con funciones de flecha, aca abajo dejo las dos busquedas pero con funciones de flecha
+
+var busquedaPrecios = precios.some(precio => precio >= 80);
