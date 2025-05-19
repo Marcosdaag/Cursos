@@ -1,5 +1,5 @@
 {
-  "name": "aprendiendo-angular",
+  "name": "proyecto-anguar",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:aprendiendo-angular": "node dist/aprendiendo-angular/server/server.mjs"
+    "serve:ssr:proyecto-anguar": "node dist/proyecto-anguar/server/server.mjs"
   },
   "private": true,
   "dependencies": {
