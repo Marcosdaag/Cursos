@@ -12,8 +12,10 @@ export class ZapatillasComponent implements OnInit{
     public zapatillas: Array<Zapatilla>;
     public marcas: string[]; // Creo el array de marcas
     public color: string;
+    public miMarca:string;
 
 constructor(){
+  this.miMarca = "";
   this.color = 'yellow';
   this.marcas = new Array(); //Aca le doy un valor al array para incializarlo indefinido
   this.zapatillas = [ //Nuevo array de elementos Zapatilla dentro del array zapatillas
@@ -38,4 +40,13 @@ marcasList(){
 
   });
 }
+
+getMarca(){
+  alert(this.miMarca);
+}
+
+setMarca(){
+  this.marcas.push(this.miMarca);
+}
+
 }
