@@ -1,8 +1,6 @@
 <h2>{{titulo}}</h2>
 <ul>
-    <li>ADIDAS</li>
-    <li>NIKE</li>
-    <li>YEEZY</li>
+    <li *ngFor="let elemento of zapatillas">
+        {{elemento.nombre}} - <strong>{{elemento.precio}}</strong>
+    </li>
 </ul>
-
-<button (click)="cambiarTitulo()">Modificar Titulo</button>

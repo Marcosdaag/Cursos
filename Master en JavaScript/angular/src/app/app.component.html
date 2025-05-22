@@ -5,7 +5,10 @@
     'border-color' : config.color,
     'border-radius' : '5px'
 }">
-<h1>{{titulo}}</h1>
+<h1 [ngStyle]="{
+    'margin-top' : '-10px',
+    'margin-bottom' : '50px',
+}">{{titulo}}</h1>
 <app-videojuegos></app-videojuegos>
 <button (click)="switchZapatillas(false)" *ngIf="mostrarZapatillas">Ocultar</button>
 <button (click)="switchZapatillas(true)" *ngIf="!mostrarZapatillas">Mostrar</button>
