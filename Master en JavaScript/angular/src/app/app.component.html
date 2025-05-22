@@ -1,3 +1,5 @@
 <app-videojuegos></app-videojuegos>
-<app-zapatillas></app-zapatillas>
+<button (click)="switchZapatillas(false)" *ngIf="mostrarZapatillas">Ocultar</button>
+<button (click)="switchZapatillas(true)" *ngIf="!mostrarZapatillas">Mostrar</button>
+<app-zapatillas *ngIf="mostrarZapatillas"></app-zapatillas>
 <app-cursos></app-cursos>

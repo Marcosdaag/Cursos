@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  mostrarZapatillas: boolean = true;
+
+  switchZapatillas(value: boolean){
+    this.mostrarZapatillas = value;
+  }
+  
 }

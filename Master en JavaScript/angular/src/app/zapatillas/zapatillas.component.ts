@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-zapatillas',
@@ -6,7 +6,7 @@ import { Component, OnInit, DoCheck } from '@angular/core';
   standalone: false,
   styleUrl: './zapatillas.component.css'
 })
-export class ZapatillasComponent implements OnInit, DoCheck {
+export class ZapatillasComponent implements OnInit, DoCheck, OnDestroy {
     public titulo: string = "Componente de zapatillas";
 
     ngOnInit(): void {
@@ -19,5 +19,8 @@ export class ZapatillasComponent implements OnInit, DoCheck {
 
     cambiarTitulo(){
       this.titulo = "Componente de zapatillas cambiado";
+    }
+    ngOnDestroy(): void {
+      console.log("Se destruyo el componente");
     }
 }
