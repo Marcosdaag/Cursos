@@ -49,4 +49,8 @@ setMarca(){
   this.marcas.push(this.miMarca);
 }
 
+borrarMarca(indice: number){
+  this.marcas.splice(indice, 1);
+}
+
 }

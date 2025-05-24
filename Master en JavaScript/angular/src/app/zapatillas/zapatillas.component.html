@@ -8,7 +8,11 @@
 
     <p>Compra las zapatillas de las mejores marcas</p>
         <ul>
-            <li *ngFor="let elemento of marcas; let indice = index">{{indice+ " "+elemento}}</li>
+
+            <li *ngFor="let elemento of marcas; let indice = index">{{indice+ " "+elemento}}
+            <button (click)="borrarMarca(indice)">borrar</button>
+            </li>
+            
         </ul>
 
 
