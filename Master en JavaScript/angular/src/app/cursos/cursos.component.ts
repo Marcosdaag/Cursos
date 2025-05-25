@@ -21,7 +21,15 @@ export class CursosComponent implements OnInit {
       this.nombre = params['nombre'];
       this.followers = +params['followers']; // De esta manera paso el dato a number
 
+      if(this.nombre == 'ninguno'){
+        this._router.navigate(['./videojuegos']);
+      }
+
       console.log(this.nombre);
     });
+  }
+
+  redirigir(){
+    this._router.navigate(['/zapatillas']);
   }
 }
