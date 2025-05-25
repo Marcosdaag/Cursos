@@ -22,7 +22,14 @@
     <li *ngFor="let elemento of zapatillas">
 
         <div *ngIf="elemento.stock == true">
-        {{elemento.marca}} - {{elemento.nombre}} -<strong>{{elemento.precio}} $</strong>
+        {{elemento.marca}} - {{elemento.nombre}} -
+        <strong 
+        [class.altoPrecio]="elemento.precio > 10000"
+        [ngClass]="{
+            'fondoRojo' : elemento.precio < 10000,
+            'subrayado' : elemento.marca == 'Adidas'
+        }"
+        >{{elemento.precio}} $</strong>
         
         <span *ngIf="elemento.precio <= 10000" 
                     [style.background]="elemento.precio <= 10000 ? 'green' : 'transparent' ">!EN OFERTA!</span>
