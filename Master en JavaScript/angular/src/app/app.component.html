@@ -9,9 +9,9 @@
     'margin-top' : '-10px',
     'margin-bottom' : '50px',
 }">{{titulo}}</h1>
-<app-videojuegos></app-videojuegos>
-<button (click)="switchZapatillas(false)" *ngIf="mostrarZapatillas">Ocultar</button>
+<!-- <button (click)="switchZapatillas(false)" *ngIf="mostrarZapatillas">Ocultar</button>
 <button (click)="switchZapatillas(true)" *ngIf="!mostrarZapatillas">Mostrar</button>
-<app-zapatillas *ngIf="mostrarZapatillas"></app-zapatillas>
-<app-cursos></app-cursos>
+<app-zapatillas *ngIf="mostrarZapatillas"></app-zapatillas> -->
+<router-outlet></router-outlet>
+
 </div>
