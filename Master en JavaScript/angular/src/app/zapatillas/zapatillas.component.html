@@ -1,7 +1,7 @@
 <h2>{{titulo}}</h2>
 
     <p>Agregar marca</p>
-    <input type="text" [(ngModel)]="miMarca"/>
+    <input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" (keyup.enter)="mostrarPalabra()"/>
     <button (click)="getMarca()">mostrar</button>
     <button (click)="setMarca()">agregar marca</button>
     <p>{{miMarca}}</p>

@@ -53,4 +53,12 @@ borrarMarca(indice: number){
   this.marcas.splice(indice, 1);
 }
 
+onBlur(){
+  console.log("has salido del input");
+}
+
+mostrarPalabra(){
+  alert(this.miMarca);
+}
+
 }
