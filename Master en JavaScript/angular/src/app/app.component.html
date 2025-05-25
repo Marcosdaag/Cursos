@@ -9,9 +9,23 @@
     'margin-top' : '-10px',
     'margin-bottom' : '50px',
 }">{{titulo}}</h1>
+
+<nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Zapatillas</a>
+    &nbsp;  <!-- Es para agregar separacion entre los links nada mas -->
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']">Videojuegos</a>
+</nav>
+
+<hr>
+
 <!-- <button (click)="switchZapatillas(false)" *ngIf="mostrarZapatillas">Ocultar</button>
 <button (click)="switchZapatillas(true)" *ngIf="!mostrarZapatillas">Mostrar</button>
 <app-zapatillas *ngIf="mostrarZapatillas"></app-zapatillas> -->
+
+
+
 <router-outlet></router-outlet>
 
 </div>

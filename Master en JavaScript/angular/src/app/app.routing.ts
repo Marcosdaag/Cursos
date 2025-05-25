@@ -11,6 +11,7 @@ import { Router } from "express";
 // Array de configuracion de las rutas
 const appRoutes: Routes = [
     {path: '', component: ZapatillasComponent},
+    {path: 'home', component: ZapatillasComponent},
     {path: 'videojuegos', component: VideojuegosComponent},
     {path: 'cursos', component: CursosComponent},
     {path: '**', component: ZapatillasComponent}
