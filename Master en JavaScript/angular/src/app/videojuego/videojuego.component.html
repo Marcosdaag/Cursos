@@ -1,10 +1,15 @@
 <h1>Pagina de videojuegos</h1>
 
-<div *ngIf="identificado; else noIdentificado">
-    <h3>Estas identificado en la app</h3>
-    <button (click)="unsetIdentificado()">Cerrar sesion</button>
-</div>
+<!-- dentro del div comprobamos la variable identificado y despues del ; pongo la logica para mostra una u otra template -->
+<div *ngIf="identificado; then usuarioIdentificado else noIdentificado"></div>
 
+<!-- template 1 -->
+<ng-template #usuarioIdentificado>
+        <h3>Estas identificado en la app</h3>
+    <button (click)="unsetIdentificado()">Cerrar sesion</button>
+</ng-template>
+
+<!-- template 2 -->
 <ng-template #noIdentificado>
         <p>No estas identificado, pulsa este boton para identificarte</p>
         <button (click)="setIdentificado()">Login</button>
