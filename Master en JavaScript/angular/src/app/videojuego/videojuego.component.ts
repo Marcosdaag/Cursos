@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './videojuego.component.css'
 })
 export class VideojuegosComponent {
-  title = 'listado de videojuegos';
+  public identificado: boolean;
+
+  constructor(){
+    this.identificado = false;
+  }
+
+  setIdentificado(){
+    this.identificado = true;
+  }
+
+  unsetIdentificado(){
+    this.identificado = false;
+  }
 }

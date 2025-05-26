@@ -1,7 +1,11 @@
-<ul>
-    <h2>{{title}}</h2>
-    <li>GTA 5</li>
-    <li>MARIO BROSS</li>
-    <li>VALORANT</li>
-    <li>CS2</li>
-</ul>
+<h1>Pagina de videojuegos</h1>
+
+<div *ngIf="identificado; else noIdentificado">
+    <h3>Estas identificado en la app</h3>
+    <button (click)="unsetIdentificado()">Cerrar sesion</button>
+</div>
+
+<ng-template #noIdentificado>
+        <p>No estas identificado, pulsa este boton para identificarte</p>
+        <button (click)="setIdentificado()">Login</button>
+</ng-template>
