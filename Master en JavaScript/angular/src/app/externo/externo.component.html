@@ -14,3 +14,20 @@
     <h2>{{user.first_name +' '+ user.last_name}}</h2>
     <img src="{{user.avatar}}" alt="profile" width="130px">
 </div>
+
+<hr>
+
+<h2>Crear usuario</h2>
+<form action="" #newUser="ngForm" (ngSubmit)="onSubmit(nuevoUser)">
+    <p>
+        <label for="name">Nombre</label> <br>
+        <input type="text" name="name" id="" #name="ngModel" [(ngModel)]="nuevoUser.name">
+    </p>
+
+    <p>
+        <label for="job">Job</label> <br>
+        <input type="text" name="job" id="" #job="ngModel" [(ngModel)]="nuevoUser.job">
+    </p>
+
+    <input type="submit" name="" id="" value="Guardar usuario" [disabled]="!newUser.form.valid">
+</form>
