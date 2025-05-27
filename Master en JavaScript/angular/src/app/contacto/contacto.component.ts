@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ContactoUsuario } from '../model/contacto.usuario';
+import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
