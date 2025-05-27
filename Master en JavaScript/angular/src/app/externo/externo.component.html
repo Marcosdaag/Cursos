@@ -1,3 +1,9 @@
+{{fecha | date: 'fullDate'}}
+{{fecha | date: 'dd/MM/yy' | uppercase}}
+{{"HOLA MUNDO" | lowercase}}
+<br>
+<div [innerHTML]="4 | calculadora: 2"></div>
+<hr>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 
 <div *ngIf="!user">

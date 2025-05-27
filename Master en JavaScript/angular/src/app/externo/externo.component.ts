@@ -12,12 +12,14 @@ export class ExternoComponent implements OnInit {
 
   public user: any;
   public userId: number;
+  public fecha: any;
 
   constructor(private _peticionesService: PeticionesService) { 
     this.userId = 2;
   }
 
   ngOnInit(): void {
+    this.fecha = new Date(2019, 5,20); // Le signamos una fecha espeficica, en caso de no asignarle se usa la fecha actual
     this.cargaUsuario();
   }
 
