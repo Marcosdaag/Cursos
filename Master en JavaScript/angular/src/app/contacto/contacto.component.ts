@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactoUsuario } from '../model/contacto.usuario';
 
 @Component({
   selector: 'app-contacto',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
+  public usuario: ContactoUsuario;
 
+  constructor(){
+    this.usuario = new ContactoUsuario('','','','');
+  }
+
+  onSubmit(){
+    console.log("Evento submit lanzado");
+    console.log(this.usuario);
+  }
 }
