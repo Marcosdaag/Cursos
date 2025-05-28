@@ -9,3 +9,14 @@ console.log(args);
 
 // El slice(2) se utiliza para mostrar a partir del segundo parametro ya que el primero siempre va a ser la ruta del archivo
 
+var numero1 = parseFloat(args[0]);
+var numero2 = parseFloat(args[1]);
+
+var plantilla = `
+La suma es: ${numero1+numero2}
+La resta es: ${numero1-numero2}
+La multiplicacion es: ${numero1*numero2}
+La division es: ${numero1/numero2}
+`;
+
+console.log(plantilla);
