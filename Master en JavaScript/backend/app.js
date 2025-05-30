@@ -15,6 +15,10 @@ app.use(bodyParser.json()); // Esto hace que todos los datos que me lleguen son 
 // Cors
 
 // Rutas
+app.get('/', (request, response) =>{
+    response.status(200).send({message: "Pagina de inicio"});
+});
+
 app.get('/test', (request, response) =>{
     response.status(200).send({message: "Hola mundo desde mi api de nodejs"});
 });

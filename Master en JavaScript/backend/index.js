@@ -15,8 +15,9 @@ mongoose.connect('mongodb://localhost:27017/portfolio')
 
         // Creacion del servidor
         app.listen(port, ()=> {
-            console.log("Servidor en funcionamiento");
+            console.log("Servidor funcionando correctamente");
         });
+        
         
     })
     .catch(error => console.log(error));
