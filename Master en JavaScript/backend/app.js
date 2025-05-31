@@ -23,5 +23,10 @@ app.get('/test', (request, response) =>{
     response.status(200).send({message: "Hola mundo desde mi api de nodejs"});
 });
 
+app.post('/test', (request, response) =>{
+    console.log(request.body.nombre);
+    response.status(200).send({message: "Hola mundo desde mi api de nodejs"});
+});
+
 // Exportar
 module.exports =  app;
