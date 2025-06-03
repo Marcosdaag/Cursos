@@ -3,13 +3,13 @@
 var controller = {
     home: function (req, res) {
         return res.status(200).send({
-            message: 'Soy la home'
+            message: 'Soy la home por get'
         });
     },
 
     test: function (req, res) {
         return res.status(200).send({
-            message: 'Soy el test'
+            message: 'Soy el test por post'
         });
     }
 
