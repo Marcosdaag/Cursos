@@ -15,7 +15,7 @@ var controller = {
         });
     },
 
-    saveProject: function(req, res){
+    saveProject: function (req, res) {
         var project = new Project();
 
         var params = req.body;
@@ -26,14 +26,20 @@ var controller = {
         project.langs = params.langs;
         project.image = null;
 
-        project.save((err, projectStored)=>{
-            if(err) return res.status(500).send({message: 'Error al guardar'});
-            
-            if(!projectStored) return res.status(404).send({message: 'No se pudo guardar el proyecto'});
+        project.save().then((projectStored) => {
+            return res.status(200).send({
+                message: "proyecto guardado",
+                project: projectStored,
+            });
+        })
 
-            return res.status(200).send({project: projectStored});
-        });
+            .catch((error) => {
+                if (!projectStored)
+                    return res.status(404).send({ message: "no se ha podido guardar el proyecto" });
 
+                if (error)
+                    return res.status(500).send({ error: "Error al guardar el proyecto" });
+            });
     }
 
 };
