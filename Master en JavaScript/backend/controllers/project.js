@@ -38,7 +38,7 @@ var controller = {
                     return res.status(404).send({ message: "no se ha podido guardar el proyecto" });
 
                 if (error)
-                    return res.status(500).send({ error: "Error al guardar el proyecto" });
+                    return res.status(500).send({ error: "Error al guardar el proyecto en la base de datos" });
             });
     }
 
