@@ -46,22 +46,18 @@ var controller = {
     },
 
     // Funcion getProject
-    getProject: function(req, res){
+    getProject: async function (req, res) {
         var projectId = req.params.id;
 
-        if(projectId == null){
-            return res.status(404).send({message: 'El proyecto no existe'});
+        if (projectId == null) return res.status(404).send({ message: "El proyecto no existe" });
+
+        try {
+            const project = await Project.findById(projectId);
+            if (!project) return res.status(404).send({ message: "El proyecto no existe" });
+            return res.status(200).send({ project });
+        } catch (err) {
+            return res.status(500).send({ message: "Error al devolver los datos" });
         }
-
-        Project.findById(projectId, (err, project) =>{
-
-            if(err) return res.status(500).send({message: 'Error al devolver los datos'});
-
-            if(!project) return res.status(404).send({message: 'El proyecto no existe'});
-
-            return res.status(200).send({project});
-
-        });
     }
 
 };
