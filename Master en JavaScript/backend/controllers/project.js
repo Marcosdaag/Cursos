@@ -49,7 +49,7 @@ var controller = {
     getProject: async function (req, res) {
         var projectId = req.params.id;
 
-        if (projectId == null) return res.status(404).send({ message: "El proyecto no existe" });
+        if (projectId == null) return res.status(404).send({ message: "El proyecto no existe" }); // Verificar este if
 
         try {
             const project = await Project.findById(projectId);
