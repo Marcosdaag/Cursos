@@ -60,18 +60,19 @@ var controller = {
         }
     },
 
-    //Metodo para listar todos los proyectos
-    getProjects: function(req, res){
+    // Método para listar todos los proyectos
+    getProjects: async function (req, res) {
+        try {
+            const projects = await Project.find({}).exec();
 
-        Project.find({}).exec((err, projects)=>{
+            if (!projects || projects.length === 0) {
+                return res.status(404).send({ message: 'No hay proyectos para mostrar' });
+            }
 
-            if(err) return res.status(500).send({message: 'Error al devolver los datos'});
-
-            if(!projects) return res.status(404).send({message: 'No hay proyectos para mostrar'});
-
-            return res.status(200).send({projects});
-        });
-
+            return res.status(200).send({ projects });
+        } catch (err) {
+            return res.status(500).send({ message: 'Error al devolver los datos' });
+        }
     },
 
 
