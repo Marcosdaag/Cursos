@@ -11,5 +11,6 @@ router.post('/test', ProjectController.test);
 router.post('/save-project', ProjectController.saveProject);
 router.get('/project', ProjectController.getProject);
 router.get('/project/:id', ProjectController.getProject);
+router.get('/projects', ProjectController.getProjects);
 
 module.exports = router;

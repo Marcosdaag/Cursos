@@ -58,7 +58,22 @@ var controller = {
         } catch (err) {
             return res.status(500).send({ message: "Error al devolver los datos del proyecto" });
         }
-    }
+    },
+
+    //Metodo para listar todos los proyectos
+    getProjects: function(req, res){
+
+        Project.find({}).exec((err, projects)=>{
+
+            if(err) return res.status(500).send({message: 'Error al devolver los datos'});
+
+            if(!projects) return res.status(404).send({message: 'No hay proyectos para mostrar'});
+
+            return res.status(200).send({projects});
+        });
+
+    },
+
 
 };
 
