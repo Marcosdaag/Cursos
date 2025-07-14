@@ -63,7 +63,7 @@ var controller = {
     // Método para listar todos los proyectos
     getProjects: async function (req, res) {
         try {
-            const projects = await Project.find({}).exec();
+            const projects = await Project.find({/* aca podemos poner condiciones de busqueda */}).sort('year').exec(); // Tambien poniendo el sort lo ordeno la lista y si le pongo un menos adelante lo arregal de mayor a menor
 
             if (!projects || projects.length === 0) {
                 return res.status(404).send({ message: 'No hay proyectos para mostrar' });
