@@ -75,6 +75,22 @@ var controller = {
         }
     },
 
+    //Metodo para updatear proyectos
+    updateProject: function(req, res){
+        var projectId = req.params.id;
+        var update = req.body;
+ 
+        Project.findByIdAndUpdate(projectId, update, {new:true})
+        .then((projectUpdated)=>{
+            return res.status(200).send({
+                project: projectUpdated
+            })
+        })
+        .catch(() => {
+            return res.status(404).send({message: "Proyecto no encontrado para actualizar."});
+        })
+    },
+
 
 };
 
