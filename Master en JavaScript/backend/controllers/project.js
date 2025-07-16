@@ -63,7 +63,7 @@ var controller = {
     // Método para listar todos los proyectos
     getProjects: async function (req, res) {
         try {
-            const projects = await Project.find({/* aca podemos poner condiciones de busqueda */}).sort('year').exec(); // Tambien poniendo el sort lo ordeno la lista y si le pongo un menos adelante lo arregal de mayor a menor
+            const projects = await Project.find({/* aca podemos poner condiciones de busqueda */ }).sort('year').exec(); // Tambien poniendo el sort lo ordeno la lista y si le pongo un menos adelante lo arregal de mayor a menor
 
             if (!projects || projects.length === 0) {
                 return res.status(404).send({ message: 'No hay proyectos para mostrar' });
@@ -76,36 +76,70 @@ var controller = {
     },
 
     //Metodo para updatear proyectos
-    updateProject: function(req, res){
+    updateProject: function (req, res) {
         var projectId = req.params.id;
         var update = req.body;
- 
-        Project.findByIdAndUpdate(projectId, update, {new:true})
-        .then((projectUpdated)=>{
-            return res.status(200).send({
-                project: projectUpdated
+
+        Project.findByIdAndUpdate(projectId, update, { new: true })
+            .then((projectUpdated) => {
+                return res.status(200).send({
+                    project: projectUpdated
+                })
             })
-        })
-        .catch(() => {
-            return res.status(404).send({message: "Proyecto no encontrado para actualizar."});
-        })
+            .catch(() => {
+                return res.status(404).send({ message: "Proyecto no encontrado para actualizar." });
+            })
     },
 
     //Metodo para eliminar un proyecto
-    deleteProject: function(req, res){
+    deleteProject: function (req, res) {
         var projectId = req.params.id;
- 
+
         Project.findByIdAndDelete(projectId)
-        .then((projectRemoved) => {
-            return res.status(200).send({
-                project: projectRemoved
+            .then((projectRemoved) => {
+                return res.status(200).send({
+                    project: projectRemoved
+                })
             })
-        })
-        .catch((err, projectRemoved) =>{
-            if(err) return res.status(500).send({message: 'No se pudo eliminar el proyecto.'});
- 
-            if(!projectRemoved) return res.status(404).send({message: 'No se pudo encontrar el proyecto para ser eliminado.'});
-        })
+            .catch((err, projectRemoved) => {
+                if (err) return res.status(500).send({ message: 'No se pudo eliminar el proyecto.' });
+
+                if (!projectRemoved) return res.status(404).send({ message: 'No se pudo encontrar el proyecto para ser eliminado.' });
+            })
+    },
+
+    //Subir archivos
+    uploadImage: async function (req, res) {
+
+        const path = require('path');
+        const fs = require('fs');
+        const Project = require('../models/project');
+        const projectId = req.params.id;
+
+        if (!req.file) {
+            return res.status(400).send({ message: 'No se ha subido ninguna imagen' });
+        }
+
+        const fileName = req.file.filename;
+
+        try {
+            const updatedProject = await Project.findByIdAndUpdate(
+                projectId,
+                { image: fileName },
+                { new: true }
+            );
+
+            if (!updatedProject) {
+                return res.status(404).send({ message: 'No se encontró el proyecto' });
+            }
+
+            return res.status(200).send({
+                message: 'Imagen subida correctamente',
+                project: updatedProject
+            });
+        } catch (error) {
+            return res.status(500).send({ message: 'Error al subir la imagen', error });
+        }
     },
 
 
