@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Fuentes personalizadas */
+/* Importar fuentes personalizadas */
+
 @font-face{
     font-family: "yanone";
     src: url(assets/fonts/yanone.ttf);
@@ -12,7 +13,16 @@
 }
 
 
-/* Estilos globales */
+/* Estilos generales */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     font-family: "yanone", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: url(assets/img/pattern.png);
+    position: fixed;
 }
