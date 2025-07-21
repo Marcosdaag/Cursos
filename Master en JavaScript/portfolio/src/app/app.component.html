@@ -1,10 +1,20 @@
-<h1>Proyecto de angular</h1>
+<!-- Cabecera -->
+<header>
+  <ul>
+    <li><a [routerLink]="['/sobremi']">Sobre mi</a></li>
+    <li><a [routerLink]="['/proyectos']">Proyectos</a></li>
+    <li class="logo"><a href="#">MA</a></li>
+    <li><a [routerLink]="['/crear']">Crear</a></li>
+    <li><a [routerLink]="['/contacto']">Contacto</a></li>
+  </ul>
+</header>
 
-<ul>
-  <li><a [routerLink]="['/sobremi']">Sobre mi</a></li>
-  <li><a [routerLink]="['/proyectos']">Proyectos</a></li>
-  <li><a [routerLink]="['/crear']">Crear</a></li>
-  <li><a [routerLink]="['/contacto']">Contacto</a></li>
-</ul>
+<!-- Contenido de la web -->
+ <section>
+   <router-outlet></router-outlet>
+ </section>
 
-<router-outlet></router-outlet>
+ <!-- Pie de pagina -->
+<footer>
+  Master en JavaScript google.com &copy;
+</footer>
