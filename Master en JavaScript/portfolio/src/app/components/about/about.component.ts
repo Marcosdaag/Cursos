@@ -13,7 +13,7 @@ export class AboutComponent {
 
   constructor(){
     this.title = "Marcos Aguirre";
-    this.subtitle = "Estudiante de webdesign";
+    this.subtitle = "Estudiante de web design.";
     this.email = "marcosoffs99@gmail.com";
   }
 }
