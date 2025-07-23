@@ -21,7 +21,7 @@
 body{
     font-family: "yanone", Arial, Helvetica, sans-serif;
     font-size: 20px;
-    background: url(assets/img/pattern.png);
+    background: #4A90E2;
     background-attachment: fixed;
 }
 
@@ -67,7 +67,7 @@ header ul li  a{
 }
 
 header a:hover, .actived{
-    background: rgba(0, 0, 0, 0.8);
+    background:#2C3E50;
 }
 
 
@@ -96,7 +96,7 @@ header .logo a:hover{
     border-left: 1px solid #b7b7b7;
     border-right: 1px solid #b7b7b7;
     box-shadow: 0px 0px 40px black;
-    background: rgba(255, 255, 255, 0.7);
+    background: #F7F9FC;
     padding-top: 120px;
 }
 
@@ -155,4 +155,5 @@ article.about{
     padding-top: 5px;
     padding-bottom: 20px;
     text-align: justify;
+    color: #333333;
 }
