@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  public title: string;
+  public subtitle: string;
+  public email: string;
 
+  constructor(){
+    this.title = "Marcos Aguirre";
+    this.subtitle = "Estudiante de webdesign";
+    this.email = "marcosoffs99@gmail.com";
+  }
 }
