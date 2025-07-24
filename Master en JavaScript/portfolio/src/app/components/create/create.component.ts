@@ -4,22 +4,27 @@ import { ProjectService } from '../../services/project.service';
 import { Form } from '@angular/forms';
 import { response } from 'express';
 import { NgForm } from '@angular/forms';
+import { UploadService } from '../../services/upload.service';
+import { privateDecrypt } from 'crypto';
+import { Global } from '../../services/global';
 
 @Component({
   selector: 'app-create',
   standalone: false,
   templateUrl: './create.component.html',
   styleUrl: './create.component.css',
-  providers: [ProjectService]
+  providers: [ProjectService, UploadService]
 })
 export class CreateComponent implements OnInit {
 
   public title: string;
   public project: Project;
   public status: string;
+  public filesToUpload: Array<File> = [];
 
   constructor(
-    private _projectService: ProjectService
+    private _projectService: ProjectService,
+    private _uploadService: UploadService
   ){
     this.title = "Crear proyecto";
     this.project = new Project('','','','',2025,'',''); // A la varaible project le decimos que es una nueva instancia del modelo Project y definimos todos sus parametros vacios exepto el year que en este caso de lo damos por default
@@ -31,12 +36,19 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(this.project);
+
+    //Guardar los datos
     this._projectService.saveProject(this.project).subscribe(
       response =>{
         if(response.project){
-          this.status = 'succes';
-          form.reset();
+          
+          //Subir la imagen
+          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id,[],this.filesToUpload,'image').then((result:any)=>{
+            this.status = 'succes';
+            console.log(result);
+            form.reset();
+          });    
+              
         }else{
           this.status = 'failed';
         }
@@ -46,4 +58,9 @@ export class CreateComponent implements OnInit {
       }
     );
   }
+
+  fileChangeEvent(fileInput: any){
+    this.filesToUpload = <Array<File>>fileInput.target.files;
+  }
+
 }
