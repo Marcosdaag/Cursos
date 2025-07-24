@@ -1,6 +1,8 @@
 'use strict'
 
 var Project = require('../models/project');
+var path = require('path');
+var fs = require('fs');
 
 var controller = {
     // Funcion home
@@ -141,6 +143,20 @@ var controller = {
             return res.status(500).send({ message: 'Error al subir la imagen', error });
         }
     },
+
+    //Devolver imagen
+    getImageFile: function(req, res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+
+        fs.stat(path_file, (err, stats) => {
+        if (!err && stats.isFile()) {
+            return res.sendFile(path.resolve(path_file));
+        } else {
+            return res.status(404).send({ message: "No existe la imagen..." });
+        }
+        });
+    }
 
 
 };

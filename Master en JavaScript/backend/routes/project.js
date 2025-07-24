@@ -33,5 +33,6 @@ router.get('/projects', ProjectController.getProjects);
 router.put('/projects/:id', ProjectController.updateProject);
 router.delete('/projects/:id', ProjectController.deleteProject);
 router.post('/upload-image/:id', upload.single('image'), ProjectController.uploadImage);
+router.get('/get-image/:image', ProjectController.getImageFile);
 
 module.exports = router;
