@@ -280,3 +280,8 @@ form input[disabled]:hover {
 .project img{
     width: 100%;
 }
+
+.project a{
+    text-decoration: none;
+    color: black;
+}

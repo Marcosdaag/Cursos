@@ -21,6 +21,7 @@ export class CreateComponent implements OnInit {
   public project: Project;
   public status: string;
   public filesToUpload: Array<File> = [];
+  public save_project: Project;
 
   constructor(
     private _projectService: ProjectService,
@@ -29,6 +30,7 @@ export class CreateComponent implements OnInit {
     this.title = "Crear proyecto";
     this.project = new Project('','','','',2025,'',''); // A la varaible project le decimos que es una nueva instancia del modelo Project y definimos todos sus parametros vacios exepto el year que en este caso de lo damos por default
     this.status = '';
+    this.save_project = new Project('','','','',2025,'','');
   }
 
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class CreateComponent implements OnInit {
           //Subir la imagen
           this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id,[],this.filesToUpload,'image').then((result:any)=>{
             this.status = 'succes';
-            console.log(result);
+            this.save_project = response.project;
             form.reset();
           });    
               
