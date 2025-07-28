@@ -92,6 +92,7 @@ header .logo a:hover {
 /* Contenedor principal (section) */
 #content {
     min-height: 750px;
+    height: auto;
     width: 75%;
     margin: 0px auto;
     border-left: 1px solid #b7b7b7;
@@ -255,4 +256,27 @@ form input[disabled]:hover {
     border-radius: 5px;
     border: 1px solid #e57373;
     color: #b71c1c;
+}
+
+/* Pagina de proyectos */
+.project {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.project img{
+    width: 100%;
 }
