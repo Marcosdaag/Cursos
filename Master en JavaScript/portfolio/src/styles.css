@@ -171,6 +171,21 @@ article.about {
     padding-top: 10px;
 }
 
+.container .image{
+    float: left;
+    width: 49%;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .data{
+    float: left;
+    width: 49%;
+    margin-left: 25px;
+}
+
 .container h2 {
     display: block;
     border-bottom: 1px solid #ccc;
@@ -198,7 +213,9 @@ form textarea {
 }
 
 form button,
-form input[type="submit"] {
+form input[type="submit"],
+.button-edit,
+.button-delete {
     font-size: 15px;
     padding: 10px;
     display: block;
@@ -208,6 +225,24 @@ form input[type="submit"] {
     border-radius: 3px;
     border: 1px solid #0c233a;
     cursor: pointer;
+}
+
+.button-edit,
+.button-delete {
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.button-edit{
+    background: rgb(205, 138, 15);
+    color: black;
+}
+
+.button-delete{
+    background: rgb(189, 25, 25);
+    color: black;
 }
 
 form button:hover,

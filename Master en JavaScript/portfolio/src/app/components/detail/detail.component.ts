@@ -3,6 +3,7 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../services/global';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { response } from 'express';
 
 @Component({
   selector: 'app-detail',
@@ -41,5 +42,18 @@ export class DetailComponent implements OnInit{
         console.log(<any>error)
       }
     )
+  }
+
+  deleteProject(id: string){
+    this._projectService.deleteProject(id).subscribe(
+      response =>{
+        if(response.project){
+          this._router.navigate(['/proyectos']);
+        }
+      },
+      error =>{
+        console.log(<any>error);
+      }
+    );
   }
 }
